@@ -1,0 +1,156 @@
+body {
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+/* ---------- TITULOS ---------- */
+.titulo {
+  text-align: center;
+  padding: 20px;
+}
+.titulo h1 {
+  font-family: "Bangers", system-ui;
+  font-weight: 100;
+  font-size: 50px;
+  color: rgb(51, 250, 15);
+  text-shadow: 0 0 100px rgba(30, 255, 0, 0.958);
+}
+.subtitulo {
+  font-family: "Bangers", system-ui;
+  font-weight: 100;
+  font-size: 30px;
+  color: rgb(61, 255, 27);
+  text-shadow: 0 0 100px rgb(72, 255, 0);
+  margin-top: 10px;
+}
+
+/* ---------- CONTENEDOR ---------- */
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ---------- TARJETAS BASE ---------- */
+.tarjeta {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 5px solid #d9ff00;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 50px rgb(245, 255, 57);
+  transition: transform 0.3s ease;
+}
+.tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+/* ---------- VARIACIONES ---------- */
+.tarjeta2 {
+  border-color: #0084ff;
+  box-shadow: 0 10px 50px rgb(0, 110, 255);
+}
+.tarjeta3 {
+  border-color: #a305ff;
+  box-shadow: 0 10px 50px rgb(183, 0, 255);
+}
+
+/* ---------- IMAGENES ---------- */
+.tarjeta img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* ---------- TITULOS DE TARJETAS ---------- */
+.tarjeta h3 {
+  font-family: "Titan One", sans-serif;
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: rgb(234, 255, 0);
+  text-shadow: 0 0 40px rgb(238, 255, 0);
+}
+.tarjeta2 h3 {
+  color: #0084ff;
+  text-shadow: 0 0 40px rgb(0, 132, 255);
+}
+.tarjeta3 h3 {
+  color: #a305ff;
+  text-shadow: 0 0 40px rgb(247, 0, 255);
+}
+
+/* ---------- TEXTO ---------- */
+.tarjeta p {
+  font-size: 18px;
+  text-align: justify;
+  margin-bottom: 15px;
+  color: #d9ff00;
+  text-shadow: 0 0 20px rgb(255, 238, 0);
+}
+.tarjeta2 p {
+  color: #0066ff;
+  text-shadow: 0 0 20px rgb(2, 91, 255);
+}
+.tarjeta3 p {
+  color: #9900ff;
+  text-shadow: 0 0 20px rgb(154, 2, 255);
+}
+
+/* ---------- LISTAS ---------- */
+.tarjeta ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+.tarjeta ul li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.tarjeta ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: currentColor;
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 768px) {
+  .titulo h1 {
+    font-size: 36px;
+  }
+  .subtitulo {
+    font-size: 22px;
+  }
+  .tarjeta h3 {
+    font-size: 22px;
+  }
+  .tarjeta p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .titulo h1 {
+    font-size: 28px;
+  }
+  .subtitulo {
+    font-size: 18px;
+  }
+  .tarjeta {
+    padding: 15px;
+  }
+  .tarjeta h3 {
+    font-size: 20px;
+  }
+  .tarjeta p {
+    font-size: 14px;
+  }
+}
